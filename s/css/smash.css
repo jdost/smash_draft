@@ -33,6 +33,7 @@ footer div {
 footer span {
    display: block;
    bottom: 0;
+   width: 100px;
 }
 #roster .drafted,
 #roster .banned {
@@ -43,6 +44,17 @@ footer span {
 }
 #a_team, #b_team {
    padding: 0;
+}
+#a_team h4, #b_team h4 {
+   font-size: 1.2em;
+   margin: 3px 0;
+   float: left;
+}
+#a_team img, #b_team img {
+   float: left;
+}
+.clearBans {
+   clear: both;
 }
 li {
    padding: 0.25rem 0.75rem;

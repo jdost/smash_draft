@@ -35,7 +35,7 @@ var state = function (rules) {
           current = STATES.draft;
         break;
       case STATES.ban:
-        if (++pick < rules.bans)
+        if (++pick < (rules.bans * 2))
           break;
 
         pick = 0;

@@ -5,7 +5,7 @@ function updateTicker() {
       ticker.html("Setup");
       break;
     case STATES.ban:
-      ticker.html("Ban");
+      ticker.html("Ban: " + GAME.teams[GAME.state.pick()].color);
       break;
     case STATES.draft:
       var currentPick = $("li.current").text();
@@ -95,7 +95,8 @@ function draft(character) {
 
   character.tile.addClass("drafted");
   GAME.teams[GAME.state.pick()].pick(character);
-  GAME.current.push({team: GAME.state.pick(), character: character});
+  if (GAME.state.current() === STATES.draft)
+    GAME.current.push({team: GAME.state.pick(), character: character});
 
   GAME.state.transition();
 };
