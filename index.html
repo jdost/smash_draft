@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+   <head>
+      <title>Smash Pool Drafter</title>
+
+      <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+      <link rel="stylesheet" href="/s/css/characters.css">
+      <link rel="stylesheet" href="/s/css/smash.css">
+   </head>
+
+   <body class="blue-text text-darken-2 row">
+      <main>
+         <ul id="a_team" class="collections lighten-2 col s3"> </ul>
+         <div id="roster" class="col s6 brown lighten-3"> </div>
+         <ul id="b_team" class="collections lighten-2 col s3"> </ul>
+
+         <form id="forms" class="row modal" action="javascript:;">
+            <div class="input-field col s6">
+               <select id="a_color">
+                  <option value="" disabled selected>Select Team Color</option>
+                  <option value="red">Red</option>
+                  <option value="blue">Blue</option>
+                  <option value="green">Green</option>
+               </select>
+               <label label-for="a_color">Team Color</label>
+            </div>
+            <div class="input-field col s6">
+               <select id="b_color">
+                  <option value="" disabled selected>Select Team Color</option>
+                  <option value="red">Red</option>
+                  <option value="blue">Blue</option>
+                  <option value="green">Green</option>
+               </select>
+               <label label-for="b_color">Team Color</label>
+            </div>
+            <div class="input-field col s6">
+               <input name="a_0" type="text" />
+               <label label-for="a_0">Player Name</label>
+            </div>
+            <div class="input-field col s6">
+               <input name="b_0" type="text" />
+               <label label-for="b_0">Player Name</label>
+            </div>
+
+            <button class="right btn waves-effect waves-light" type="submit" name="action">
+               Smash!
+            </button>
+         </form>
+      </main>
+
+      <footer class="light-blue darken-4 white-text valign-wrapper">
+         <div class="valign"></div>
+         <span class="right-align"></span>
+      </footer>
+
+      <script type="text/javascript" src="/s/js/state.js"> </script>
+      <script type="text/javascript" src="/s/js/pool_gen.js"> </script>
+      <script type="text/javascript" src="/s/js/team.js"> </script>
+      <script type="text/javascript" src="/s/js/ui.js"> </script>
+
+      <script type="text/javascript">
+         var GAME = {};
+         $(document).ready(function () {
+            var ruleset = location.search.replace("?", "") || "default";
+            $.ajax("/data/rules/" + ruleset + ".json", {
+            }).done(function (data) {
+               GAME.rules = data;
+               GAME.state = state(data);
+               GAME.roster = new roster(data);
+               GAME.teams = [];
+               GAME.current = [];
+
+               setupForm(data);
+
+               GAME.state.setHook(STATES.game, gameOverlay);
+               GAME.state.setHook(STATES.setup, updateTicker);
+            });
+         });
+      </script>
+   </body>
+</html>

@@ -1,0 +1,385 @@
+
+.toonlink_head i:before {
+   background-image: url('/s/img/icons/toon_link.png');
+}
+.toonlink_icon {
+   background: url('/s/img/icons/hyrule_icon.png') 50% 50%;
+}
+
+.duckhunt_head i:before {
+   background-image: url('/s/img/icons/duck_hunt.png');
+}
+.duckhunt_icon {
+   background: url('/s/img/icons/duck_icon.png') 50% 50%;
+}
+
+.rob_head i:before {
+   background-image: url('/s/img/icons/rob.png');
+}
+.rob_icon {
+   background: url('/s/img/icons/gyro_icon.png') 50% 50%;
+}
+
+.littlemac_head i:before {
+   background-image: url('/s/img/icons/little_mac.png');
+}
+.littlemac_icon {
+   background: url('/s/img/icons/boxing_icon.png') 50% 50%;
+}
+
+.donkeykong_head i:before {
+   background-image: url('/s/img/icons/donkey_kong.png');
+}
+.donkeykong_icon {
+   background: url('/s/img/icons/dk_icon.png') 50% 50%;
+}
+
+.sheik_head i:before {
+   background-image: url('/s/img/icons/sheik.png');
+}
+.sheik_icon {
+   background: url('/s/img/icons/hyrule_icon.png') 50% 50%;
+}
+
+.roy_head i:before {
+   background-image: url('/s/img/icons/roy.png');
+}
+.roy_icon {
+   background: url('/s/img/icons/fireemblem_icon.png') 50% 50%;
+}
+
+.yoshi_head i:before {
+   background-image: url('/s/img/icons/yoshi.png');
+}
+.yoshi_icon {
+   background: url('/s/img/icons/egg_icon.png') 50% 50%;
+}
+
+.olimar_head i:before {
+   background-image: url('/s/img/icons/olimar.png');
+}
+.olimar_icon {
+   background: url('/s/img/icons/flower_icon.png') 50% 50%;
+}
+
+.mario_head i:before {
+   background-image: url('/s/img/icons/mario.png');
+}
+.mario_icon {
+   background: url('/s/img/icons/mushroom_icon.png') 50% 50%;
+}
+
+.peach_head i:before {
+   background-image: url('/s/img/icons/peach.png');
+}
+.peach_icon {
+   background: url('/s/img/icons/mushroom_icon.png') 50% 50%;
+}
+
+.dedede_head i:before {
+   background-image: url('/s/img/icons/king_dedede.png');
+}
+.dedede_icon {
+   background: url('/s/img/icons/star_icon.png') 50% 50%;
+}
+
+.megaman_head i:before {
+   background-image: url('/s/img/icons/mega_man.png');
+}
+.megaman_icon {
+   background: url('/s/img/icons/gear_icon.png') 50% 50%;
+}
+
+.fox_head i:before {
+   background-image: url('/s/img/icons/fox.png');
+}
+.fox_icon {
+   background: url('/s/img/icons/starfox_icon.png') 50% 50%;
+}
+
+.zelda_head i:before {
+   background-image: url('/s/img/icons/zelda.png');
+}
+.zelda_icon {
+   background: url('/s/img/icons/hyrule_icon.png') 50% 50%;
+}
+
+.jigglypuff_head i:before {
+   background-image: url('/s/img/icons/jigglypuff.png');
+}
+.jigglypuff_icon {
+   background: url('/s/img/icons/pokeball_icon.png') 50% 50%;
+}
+
+.samus_head i:before {
+   background-image: url('/s/img/icons/samus.png');
+}
+.samus_icon {
+   background: url('/s/img/icons/metroid_icon.png') 50% 50%;
+}
+
+.shulk_head i:before {
+   background-image: url('/s/img/icons/shulk.png');
+}
+.shulk_icon {
+   background: url('/s/img/icons/xenoblade_icon.png') 50% 50%;
+}
+
+.miigunner_head i:before {
+   background-image: url('/s/img/icons/mii_gunner.png');
+}
+.miigunner_icon {
+   background: url('/s/img/icons/smash_icon.png') 50% 50%;
+}
+
+.villager_head i:before {
+   background-image: url('/s/img/icons/villager.png');
+}
+.villager_icon {
+   background: url('/s/img/icons/leaf_icon.png') 50% 50%;
+}
+
+.sonic_head i:before {
+   background-image: url('/s/img/icons/sonic.png');
+}
+.sonic_icon {
+   background: url('/s/img/icons/hedgehog_icon.png') 50% 50%;
+}
+
+.charizard_head i:before {
+   background-image: url('/s/img/icons/charizard.png');
+}
+.charizard_icon {
+   background: url('/s/img/icons/pokeball_icon.png') 50% 50%;
+}
+
+.kirby_head i:before {
+   background-image: url('/s/img/icons/kirby.png');
+}
+.kirby_icon {
+   background: url('/s/img/icons/star_icon.png') 50% 50%;
+}
+
+.wiifit_head i:before {
+   background-image: url('/s/img/icons/wii_fit_trainer.png');
+}
+.wiifit_icon {
+   background: url('/s/img/icons/wiifit_icon.png') 50% 50%;
+}
+
+.pikachu_head i:before {
+   background-image: url('/s/img/icons/pikachu.png');
+}
+.pikachu_icon {
+   background: url('/s/img/icons/pokeball_icon.png') 50% 50%;
+}
+
+.ness_head i:before {
+   background-image: url('/s/img/icons/ness.png');
+}
+.ness_icon {
+   background: url('/s/img/icons/mother_icon.png') 50% 50%;
+}
+
+.bowserjr_head i:before {
+   background-image: url('/s/img/icons/bowser_jr.png');
+}
+.bowserjr_icon {
+   background: url('/s/img/icons/mushroom_icon.png') 50% 50%;
+}
+
+.mewtwo_head i:before {
+   background-image: url('/s/img/icons/mewtwo.png');
+}
+.mewtwo_icon {
+   background: url('/s/img/icons/pokeball_icon.png') 50% 50%;
+}
+
+.drmario_head i:before {
+   background-image: url('/s/img/icons/dr_mario.png');
+}
+.drmario_icon {
+   background: url('/s/img/icons/mushroom_icon.png') 50% 50%;
+}
+
+.pit_head i:before {
+   background-image: url('/s/img/icons/pit.png');
+}
+.pit_icon {
+   background: url('/s/img/icons/icarus_icon.png') 50% 50%;
+}
+
+.wario_head i:before {
+   background-image: url('/s/img/icons/wario.png');
+}
+.wario_icon {
+   background: url('/s/img/icons/wario_icon.png') 50% 50%;
+}
+
+.darkpit_head i:before {
+   background-image: url('/s/img/icons/dark_pit.png');
+}
+.darkpit_icon {
+   background: url('/s/img/icons/icarus_icon.png') 50% 50%;
+}
+
+.metaknight_head i:before {
+   background-image: url('/s/img/icons/meta_knight.png');
+}
+.metaknight_icon {
+   background: url('/s/img/icons/star_icon.png') 50% 50%;
+}
+
+.ike_head i:before {
+   background-image: url('/s/img/icons/ike.png');
+}
+.ike_icon {
+   background: url('/s/img/icons/fireemblem_icon.png') 50% 50%;
+}
+
+.rosalina_head i:before {
+   background-image: url('/s/img/icons/rosalina_luma.png');
+}
+.rosalina_icon {
+   background: url('/s/img/icons/mushroom_icon.png') 50% 50%;
+}
+
+.diddykong_head i:before {
+   background-image: url('/s/img/icons/diddy_kong.png');
+}
+.diddykong_icon {
+   background: url('/s/img/icons/dk_icon.png') 50% 50%;
+}
+
+.cptfalcon_head i:before {
+   background-image: url('/s/img/icons/captain_falcon.png');
+}
+.cptfalcon_icon {
+   background: url('/s/img/icons/fzero_icon.png') 50% 50%;
+}
+
+.palutena_head i:before {
+   background-image: url('/s/img/icons/palutena.png');
+}
+.palutena_icon {
+   background: url('/s/img/icons/icarus_icon.png') 50% 50%;
+}
+
+.miiswords_head i:before {
+   background-image: url('/s/img/icons/mii_swordfighter.png');
+}
+.miiswords_icon {
+   background: url('/s/img/icons/smash_icon.png') 50% 50%;
+}
+
+.mrgamewatch_head i:before {
+   background-image: url('/s/img/icons/mr_game_and_watch.png');
+}
+.mrgamewatch_icon {
+   background: url('/s/img/icons/gamewatch_icon.png') 50% 50%;
+}
+
+.greninja_head i:before {
+   background-image: url('/s/img/icons/greninja.png');
+}
+.greninja_icon {
+   background: url('/s/img/icons/pokeball_icon.png') 50% 50%;
+}
+
+.lucas_head i:before {
+   background-image: url('/s/img/icons/lucas.png');
+}
+.lucas_icon {
+   background: url('/s/img/icons/mother_icon.png') 50% 50%;
+}
+
+.ryu_head i:before {
+   background-image: url('/s/img/icons/ryu.png');
+}
+.ryu_icon {
+   background: url('/s/img/icons/streetfighter_icon.png') 50% 50%;
+}
+
+.ganondorf_head i:before {
+   background-image: url('/s/img/icons/ganondorf.png');
+}
+.ganondorf_icon {
+   background: url('/s/img/icons/hyrule_icon.png') 50% 50%;
+}
+
+.lucina_head i:before {
+   background-image: url('/s/img/icons/lucina.png');
+}
+.lucina_icon {
+   background: url('/s/img/icons/fireemblem_icon.png') 50% 50%;
+}
+
+.pacman_head i:before {
+   background-image: url('/s/img/icons/pacman.png');
+}
+.pacman_icon {
+   background: url('/s/img/icons/pacman_icon.png') 50% 50%;
+}
+
+.zerosuit_head i:before {
+   background-image: url('/s/img/icons/zero_suit_samus.png');
+}
+.zerosuit_icon {
+   background: url('/s/img/icons/metroid_icon.png') 50% 50%;
+}
+
+.marth_head i:before {
+   background-image: url('/s/img/icons/marth.png');
+}
+.marth_icon {
+   background: url('/s/img/icons/fireemblem_icon.png') 50% 50%;
+}
+
+.bowser_head i:before {
+   background-image: url('/s/img/icons/bowser.png');
+}
+.bowser_icon {
+   background: url('/s/img/icons/mushroom_icon.png') 50% 50%;
+}
+
+.lucario_head i:before {
+   background-image: url('/s/img/icons/lucario.png');
+}
+.lucario_icon {
+   background: url('/s/img/icons/pokeball_icon.png') 50% 50%;
+}
+
+.luigi_head i:before {
+   background-image: url('/s/img/icons/luigi.png');
+}
+.luigi_icon {
+   background: url('/s/img/icons/mushroom_icon.png') 50% 50%;
+}
+
+.link_head i:before {
+   background-image: url('/s/img/icons/link.png');
+}
+.link_icon {
+   background: url('/s/img/icons/hyrule_icon.png') 50% 50%;
+}
+
+.miibrawler_head i:before {
+   background-image: url('/s/img/icons/mii_brawler.png');
+}
+.miibrawler_icon {
+   background: url('/s/img/icons/smash_icon.png') 50% 50%;
+}
+
+.robin_head i:before {
+   background-image: url('/s/img/icons/robin.png');
+}
+.robin_icon {
+   background: url('/s/img/icons/fireemblem_icon.png') 50% 50%;
+}
+
+.falco_head i:before {
+   background-image: url('/s/img/icons/falco.png');
+}
+.falco_icon {
+   background: url('/s/img/icons/starfox_icon.png') 50% 50%;
+}

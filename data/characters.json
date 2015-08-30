@@ -1,0 +1,277 @@
+{
+   "bowser": {
+      "name": "Bowser",
+      "icon": "mushroom_icon.png",
+      "portrait": "bowser.png"
+   },
+   "bowserjr": {
+      "name": "Bowser Jr.",
+      "icon": "mushroom_icon.png",
+      "portrait": "bowser_jr.png"
+   },
+   "charizard": {
+      "name": "Charizard",
+      "icon": "pokeball_icon.png",
+      "portrait": "charizard.png"
+   },
+   "cptfalcon": {
+      "name": "Captain Falcon",
+      "icon": "fzero_icon.png",
+      "portrait": "captain_falcon.png"
+   },
+   "darkpit": {
+      "name": "Dark Pit",
+      "icon": "icarus_icon.png",
+      "portrait": "dark_pit.png"
+   },
+   "dedede": {
+      "name": "King Dedede",
+      "icon": "star_icon.png",
+      "portrait": "king_dedede.png"
+   },
+   "diddykong": {
+      "name": "Diddy Kong",
+      "icon": "dk_icon.png",
+      "portrait": "diddy_kong.png"
+   },
+   "donkeykong": {
+      "name": "Donkey Kong",
+      "icon": "dk_icon.png",
+      "portrait": "donkey_kong.png"
+   },
+   "drmario": {
+      "name": "Dr. Mario",
+      "icon": "mushroom_icon.png",
+      "portrait": "dr_mario.png"
+   },
+   "duckhunt": {
+      "name": "Duck Hunt",
+      "icon": "duck_icon.png",
+      "portrait": "duck_hunt.png"
+   },
+   "falco": {
+      "name": "Falco",
+      "icon": "starfox_icon.png",
+      "portrait": "falco.png"
+   },
+   "fox": {
+      "name": "Fox",
+      "icon": "starfox_icon.png",
+      "portrait": "fox.png"
+   },
+   "ganondorf": {
+      "name": "Ganondorf",
+      "icon": "hyrule_icon.png",
+      "portrait": "ganondorf.png"
+   },
+   "greninja": {
+      "name": "Greninja",
+      "icon": "pokeball_icon.png",
+      "portrait": "greninja.png"
+   },
+   "ike": {
+      "name": "Ike",
+      "icon": "fireemblem_icon.png",
+      "portrait": "ike.png"
+   },
+   "jigglypuff": {
+      "name": "Jigglypuff",
+      "icon": "pokeball_icon.png",
+      "portrait": "jigglypuff.png"
+   },
+   "kirby": {
+      "name": "Kirby",
+      "icon": "star_icon.png",
+      "portrait": "kirby.png"
+   },
+   "link": {
+      "name": "Link",
+      "icon": "hyrule_icon.png",
+      "portrait": "link.png"
+   },
+   "littlemac": {
+      "name": "Little Mac",
+      "icon": "boxing_icon.png",
+      "portrait": "little_mac.png"
+   },
+   "lucario": {
+      "name": "Lucario",
+      "icon": "pokeball_icon.png",
+      "portrait": "lucario.png"
+   },
+   "lucas": {
+      "name": "Lucas",
+      "icon": "mother_icon.png",
+      "portrait": "lucas.png"
+   },
+   "lucina": {
+      "name": "Lucina",
+      "icon": "fireemblem_icon.png",
+      "portrait": "lucina.png"
+   },
+   "luigi": {
+      "name": "Luigi",
+      "icon": "mushroom_icon.png",
+      "portrait": "luigi.png"
+   },
+   "mario": {
+      "name": "Mario",
+      "icon": "mushroom_icon.png",
+      "portrait": "mario.png"
+   },
+   "marth": {
+      "name": "Marth",
+      "icon": "fireemblem_icon.png",
+      "portrait": "marth.png"
+   },
+   "megaman": {
+      "name": "Mega Man",
+      "icon": "gear_icon.png",
+      "portrait": "mega_man.png"
+   },
+   "metaknight": {
+      "name": "Meta Knight",
+      "icon": "star_icon.png",
+      "portrait": "meta_knight.png"
+   },
+   "mewtwo": {
+      "name": "Mewtwo",
+      "icon": "pokeball_icon.png",
+      "portrait": "mewtwo.png"
+   },
+   "miibrawler": {
+      "name": "Mii Brawler",
+      "icon": "smash_icon.png",
+      "portrait": "mii_brawler.png"
+   },
+   "miigunner": {
+      "name": "Mii Gunner",
+      "icon": "smash_icon.png",
+      "portrait": "mii_gunner.png"
+   },
+   "miiswords": {
+      "name": "Mii Swordfighter",
+      "icon": "smash_icon.png",
+      "portrait": "mii_swordfighter.png"
+   },
+   "mrgamewatch": {
+      "name": "Mr. Game & Watch",
+      "icon": "gamewatch_icon.png",
+      "portrait": "mr_game_and_watch.png"
+   },
+   "ness": {
+      "name": "Ness",
+      "icon": "mother_icon.png",
+      "portrait": "ness.png"
+   },
+   "olimar": {
+      "name": "Olimar",
+      "icon": "flower_icon.png",
+      "portrait": "olimar.png"
+   },
+   "pacman": {
+      "name": "Pac-Man",
+      "icon": "pacman_icon.png",
+      "portrait": "pacman.png"
+   },
+   "palutena": {
+      "name": "Palutena",
+      "icon": "icarus_icon.png",
+      "portrait": "palutena.png"
+   },
+   "peach": {
+      "name": "Peach",
+      "icon": "mushroom_icon.png",
+      "portrait": "peach.png"
+   },
+   "pikachu": {
+      "name": "Pikachu",
+      "icon": "pokeball_icon.png",
+      "portrait": "pikachu.png"
+   },
+   "pit": {
+      "name": "Pit",
+      "icon": "icarus_icon.png",
+      "portrait": "pit.png"
+   },
+   "rob": {
+      "name": "R.O.B.",
+      "icon": "gyro_icon.png",
+      "portrait": "rob.png"
+   },
+   "robin": {
+      "name": "Robin",
+      "icon": "fireemblem_icon.png",
+      "portrait": "robin.png"
+   },
+   "rosalina": {
+      "name": "Rosalina & Luma",
+      "icon": "mushroom_icon.png",
+      "portrait": "rosalina_luma.png"
+   },
+   "roy": {
+      "name": "Roy",
+      "icon": "fireemblem_icon.png",
+      "portrait": "roy.png"
+   },
+   "ryu": {
+      "name": "Ryu",
+      "icon": "streetfighter_icon.png",
+      "portrait": "ryu.png"
+   },
+   "samus": {
+      "name": "Samus",
+      "icon": "metroid_icon.png",
+      "portrait": "samus.png"
+   },
+   "sheik": {
+      "name": "Sheik",
+      "icon": "hyrule_icon.png",
+      "portrait": "sheik.png"
+   },
+   "shulk": {
+      "name": "Shulk",
+      "icon": "xenoblade_icon.png",
+      "portrait": "shulk.png"
+   },
+   "sonic": {
+      "name": "Sonic",
+      "icon": "hedgehog_icon.png",
+      "portrait": "sonic.png"
+   },
+   "toonlink": {
+      "name": "Toon Link",
+      "icon": "hyrule_icon.png",
+      "portrait": "toon_link.png"
+   },
+   "villager": {
+      "name": "Villager",
+      "icon": "leaf_icon.png",
+      "portrait": "villager.png"
+   },
+   "wario": {
+      "name": "Wario",
+      "icon": "wario_icon.png",
+      "portrait": "wario.png"
+   },
+   "wiifit": {
+      "name": "Wii Fit Trainer",
+      "icon": "wiifit_icon.png",
+      "portrait": "wii_fit_trainer.png"
+   },
+   "yoshi": {
+      "name": "Yoshi",
+      "icon": "egg_icon.png",
+      "portrait": "yoshi.png"
+   },
+   "zelda": {
+      "name": "Zelda",
+      "icon": "hyrule_icon.png",
+      "portrait": "zelda.png"
+   },
+   "zerosuit": {
+      "name": "Zero Suit Samus",
+      "icon": "metroid_icon.png",
+      "portrait": "zero_suit_samus.png"
+   }
+}
