@@ -111,7 +111,7 @@ function gameOverlay() {
     "</div>");
 
   GAME.current.forEach(function (pick) {
-    var display = $("<img src='/s/img/portrait/" + pick.character.portrait + "'>")
+    var display = $("<img src='./s/img/portrait/" + pick.character.portrait + "'>")
       .addClass(GAME.teams[pick.team].styles);
     overlay.find(["#a_players", "#b_players"][pick.team]).prepend(display);
   });

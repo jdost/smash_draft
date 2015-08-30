@@ -7,8 +7,8 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
-      <link rel="stylesheet" href="/s/css/characters.css">
-      <link rel="stylesheet" href="/s/css/smash.css">
+      <link rel="stylesheet" href="./s/css/characters.css">
+      <link rel="stylesheet" href="./s/css/smash.css">
    </head>
 
    <body class="blue-text text-darken-2 row">
@@ -56,16 +56,16 @@
          <span class="right-align"></span>
       </footer>
 
-      <script type="text/javascript" src="/s/js/state.js"> </script>
-      <script type="text/javascript" src="/s/js/pool_gen.js"> </script>
-      <script type="text/javascript" src="/s/js/team.js"> </script>
-      <script type="text/javascript" src="/s/js/ui.js"> </script>
+      <script type="text/javascript" src="./s/js/state.js"> </script>
+      <script type="text/javascript" src="./s/js/pool_gen.js"> </script>
+      <script type="text/javascript" src="./s/js/team.js"> </script>
+      <script type="text/javascript" src="./s/js/ui.js"> </script>
 
       <script type="text/javascript">
          var GAME = {};
          $(document).ready(function () {
             var ruleset = location.search.replace("?", "") || "default";
-            $.ajax("/data/rules/" + ruleset + ".json", {
+            $.ajax("./data/rules/" + ruleset + ".json", {
             }).done(function (data) {
                GAME.rules = data;
                GAME.state = state(data);

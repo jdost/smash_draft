@@ -9,7 +9,7 @@ roster.ROSTER_ID = "roster";
 roster.MIIS = ["miibrawler", "miigunner", "miiswords"];
 
 roster.prototype.loadCharacters = function (useMiis, cb) {
-  $.ajax("/data/characters.json", {
+  $.ajax("./data/characters.json", {
   }).done(function (chrs) {
     var characters = [];
     for (var chr in chrs) {
@@ -48,7 +48,7 @@ roster.prototype.populate = function (callback) {
     var character = this.roster[i];
 
     var tileHTML = "<div class='" + character.alias + "_icon'>" +
-      "<img src='/s/img/portrait/" + character.portrait + "'>" +
+      "<img src='./s/img/portrait/" + character.portrait + "'>" +
       "</div>";
 
     character.tile = $(tileHTML);
