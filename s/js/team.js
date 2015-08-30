@@ -4,11 +4,13 @@ function team (color, players, container) {
   var active = -1;
 
   if (GAME.rules.bans) {
+    container.append("<h4>Bans</h4>");
     for (var i=0; i < GAME.rules.bans; i++) {
       var ban = team.generateBan(color);
       container.append(ban);
       picks.push(ban);
     }
+    container.append("<div class=\"clearBans\"></div>");
   }
 
   for (var i=0; i < GAME.rules.bestOf; i++) {
@@ -73,4 +75,18 @@ team.generateLI = function (name, color) {
 };
 
 team.generateBan = function (color) {
+  var img = $("<img class=\"ban\">");
+
+  img.current = function () {
+    img.addClass(team.COLORS[color].normal.join(' '))
+      .addClass("current");
+  };
+
+  img.picked = function (character) {
+    img.removeClass("current")
+      .removeClass(team.COLORS[color].normal.join(' '))
+      .attr("src", "./s/img/icons/" + character.portrait);
+  };
+
+  return img;
 };
