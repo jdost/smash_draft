@@ -20,8 +20,7 @@
          <form id="forms" class="row modal" action="javascript:;">
             <div class="input-field col s6">
                <select id="a_color">
-                  <option value="" disabled selected>Select Team Color</option>
-                  <option value="red">Red</option>
+                  <option value="red" selected>Red</option>
                   <option value="blue">Blue</option>
                   <option value="green">Green</option>
                </select>
@@ -29,9 +28,8 @@
             </div>
             <div class="input-field col s6">
                <select id="b_color">
-                  <option value="" disabled selected>Select Team Color</option>
                   <option value="red">Red</option>
-                  <option value="blue">Blue</option>
+                  <option value="blue" selected>Blue</option>
                   <option value="green">Green</option>
                </select>
                <label label-for="b_color">Team Color</label>
@@ -53,6 +51,7 @@
 
       <footer class="light-blue darken-4 white-text valign-wrapper">
          <div class="valign"></div>
+         <button class="right btn">swap</button>
          <span class="right-align"></span>
       </footer>
 
@@ -77,6 +76,7 @@
 
                GAME.state.setHook(STATES.game, gameOverlay);
                GAME.state.setHook(STATES.setup, updateTicker);
+               updateTicker();
             });
          });
       </script>

@@ -1,5 +1,6 @@
 function updateTicker() {
   var ticker = $("footer div");
+  $("footer button").hide();
   switch (GAME.state.current()) {
     case STATES.setup:
       ticker.html("Setup");
@@ -10,6 +11,7 @@ function updateTicker() {
     case STATES.draft:
       var currentPick = $("li.current").text();
       ticker.html("Draft: " + currentPick + "'s pick");
+      $("footer button").show();
       break;
     case STATES.game:
       ticker.html("In Play: Game " + GAME.state.game());
@@ -87,6 +89,7 @@ function setupTeams(values_) {
   GAME.state.setHook(STATES.ban, updateTicker);
   GAME.state.setHook(STATES.draft, updateTicker);
   GAME.state.setHook(STATES.game_over, updateTicker);
+  $("footer button").click(function () { GAME.teams[GAME.state.pick()].swap(); });
 };
 
 function draft(character) {
