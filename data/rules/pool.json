@@ -1,7 +1,7 @@
 {
    "bans": 1,
    "teamSize": 2,
-   "bestOf": 5,
+   "bestOf": 3,
    "buffer": 0,
    "miis": false
 }

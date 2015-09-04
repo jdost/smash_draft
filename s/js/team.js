@@ -2,6 +2,7 @@ function team (color, players, container) {
   container.addClass(team.COLORS[color].normal.join(' '));
   var picks = [];
   var active = -1;
+  var isActive = false;
 
   if (GAME.rules.bans) {
     container.append("<h4>Bans</h4>");
@@ -24,9 +25,31 @@ function team (color, players, container) {
   return {
     pick: function (character) {
       picks[active].picked(character);
+      picks[active].character = character;
+      isActive = false;
     },
     active: function () {
       picks[++active].current();
+      isActive = true;
+    },
+    swap: function () {
+      if (!isActive)
+        return;
+
+      if (active % 2) {
+        var swap = picks.splice(active, 1)[0];
+        picks.splice(active + 1, 0, swap);
+
+        swap.uncurrent();
+        picks[active].current();
+      } else {
+        var swap = picks.splice(active, 1)[0];
+        picks.splice(active - 1, 0, swap);
+
+        swap.character = picks[active].character;
+        swap.picked(swap.character);
+        picks[active].current(swap.character.alias);
+      }
     },
     color: color,
     styles: team.COLORS[color].normal.join(' '),
@@ -60,10 +83,18 @@ team.generateLI = function (name, color) {
 
   var icon = li.find("i");
 
-  li.current = function () {
+  li.current = function (opt) {
+    if (opt)
+      li.removeClass(opt + "_head");
+
     li.removeClass("unset")
       .addClass("current")
       .addClass(team.COLORS[color].active.join(' '));
+  };
+  li.uncurrent = function () {
+    li.removeClass("current")
+      .removeClass(team.COLORS[color].active.join(' '))
+      .addClass("unset");
   };
   li.picked = function (character) {
     li.removeClass("current")
