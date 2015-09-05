@@ -1,0 +1,98 @@
+#!/bin/env python2
+
+from os import path
+import sys
+import json
+
+RULES_LOCATION = path.abspath(__file__ + "/../../data/rules")
+RULESET = {
+    "bans": 0,
+    "teamSize": 2,
+    "bestOf": 3,
+    "buffer": 0,
+    "miis": False
+}
+USAGE = '''
+build_ruleset <ruleset_name>
+
+Walks through a series of prompts to create or modify a ruleset.
+'''
+
+
+def load_rules(rules):
+    global RULESET
+    for key in RULESET:
+        if key in rules:
+            RULESET[key] = rules[key]
+
+
+def prompt(msg, default=True, target_type=bool, validation=lambda x: True):
+    if target_type == bool:
+        if default:
+            msg = msg + " [Yn]: "
+        else:
+            msg = msg + " [yN]: "
+    else:
+        msg = msg + " [" + str(default) + "]: "
+
+    while True:
+        result = raw_input(msg)
+        if result is "":
+            result = target_type(default)
+        elif target_type == bool:
+            result = target_type(result.lower() == "y")
+        else:
+            result = target_type(result)
+
+        if validation(result):
+            break
+
+        print("Invalid option: " + str(result))
+
+    return result
+
+if __name__ == "__main__":
+    if len(sys.argv) < 1:
+        print(USAGE)
+        sys.exit(1)
+
+    target_ruleset = path.join(RULES_LOCATION, sys.argv[1]) + ".json"
+    if path.exists(target_ruleset):
+        load_rules(json.load(open(target_ruleset, "r")))
+
+    RULESET["teamSize"] = prompt(
+        default=RULESET["teamSize"],
+        msg="Enter team size",
+        target_type=int,
+        validation=lambda x: x < 5 and x > 0
+    )
+
+    RULESET["bestOf"] = prompt(
+        msg="Sets are best of",
+        default=RULESET["bestOf"],
+        target_type=int,
+        validation=lambda x: x > 0 and x % 2 == 1
+    )
+
+    RULESET["bans"] = prompt(
+        msg="Number of bans per team",
+        default=RULESET["bans"],
+        target_type=int,
+        validation=lambda x: x >= 0
+    )
+
+    RULESET["miis"] = prompt(
+        msg="Allow mii fighters",
+        default=RULESET["miis"],
+        target_type=bool
+    )
+
+    RULESET["buffer"] = prompt(
+        msg="Extra fighters in selection pool",
+        default=RULESET["buffer"],
+        target_type=int,
+        validation=lambda x: x >= 0
+    )
+
+    json.dump(RULESET, open(target_ruleset, "w"),
+              indent=2, sort_keys=True, separators=(',', ': '))
