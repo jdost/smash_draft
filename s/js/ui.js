@@ -38,15 +38,14 @@ function setupForm(rules) {
     $("#b_color").appendChild(yellowOption);
   }
 
-  var formTail = form.find("button");
-  for (var i=1; i < rules.teamSize; i++) {
+  if (rules.hidePicks) {
+    form.find("#hidePicks").attr("checked", "checked");
+  }
+
+  for (var i=rules.teamSize; i < 4; i++) {
     for (var team = 0; team < 2; team++) {
       var input = ["a", "b"][team] + "_" + i;
-      formTail.before(
-        "<div class=\"input-field col s6\">" +
-          "<input name=\"" + input + "\" type=\"text\" />" +
-          "<label label-for=\"" + input + "\">Player Name</label>" +
-        "</div>");
+      form.find("[name=" + input + "]").parent().remove();
     }
   }
 
@@ -77,6 +76,10 @@ function setupTeams(values_) {
 
     GAME.teams.push(team(color, players, $("#" + team_name + "_team")));
   });
+
+  if ($("#hidePicks:checked").length) {
+    $(document.body).addClass("hide-picks");
+  }
 
   GAME.state.setHook(STATES.ban, function () {
     GAME.teams[GAME.state.pick()].active();

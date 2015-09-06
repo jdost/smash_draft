@@ -6,6 +6,7 @@ div.roster ul#b_team { right: 0; }
    width: 200px;
    height: 200px;
    float: left;
+   cursor: pointer;
 }
 #roster {
    margin-bottom: 6em;
@@ -56,6 +57,7 @@ footer span {
    font-size: 1.2em;
    margin: 3px 0;
    float: left;
+   padding-top: 20px;
 }
 #a_team img, #b_team img {
    float: left;
@@ -72,6 +74,7 @@ li i:before {
    display: inline-block;
    background-size: 30px 30px;
    content: "";
+   margin-bottom: -7px;
 }
 
 #overlay {
