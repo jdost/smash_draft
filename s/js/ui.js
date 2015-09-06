@@ -159,7 +159,7 @@ function showAbout() {
 
   if (GAME.rules.customHelp) {
     var ruleset = location.search.replace("?", "") || "default";
-    $.ajax("/data/about/" + ruleset, {
+    $.ajax("./data/about/" + ruleset, {
     }).done(function (response) {
       display(response);
     });
