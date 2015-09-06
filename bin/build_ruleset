@@ -10,7 +10,8 @@ RULESET = {
     "teamSize": 2,
     "bestOf": 3,
     "buffer": 0,
-    "miis": False
+    "miis": False,
+    "hidePicks": False
 }
 USAGE = '''
 build_ruleset <ruleset_name>
@@ -79,6 +80,12 @@ if __name__ == "__main__":
         default=RULESET["bans"],
         target_type=int,
         validation=lambda x: x >= 0
+    )
+
+    RULESET["hidePicks"] = prompt(
+        msg="Hide already selected characters",
+        default=RULESET["hidePicks"],
+        target_type=bool
     )
 
     RULESET["miis"] = prompt(

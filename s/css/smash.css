@@ -38,6 +38,10 @@ footer span {
    bottom: 0;
    width: 100px;
 }
+.hide-picks .drafted,
+.hide-picks .drafted {
+   display: none;
+}
 #roster .drafted,
 #roster .banned {
    cursor: not-allowed;

@@ -3,5 +3,6 @@
    "teamSize": 2,
    "bestOf": 3,
    "buffer": 0,
-   "miis": false
+   "miis": false,
+   "hidePicks": false
 }

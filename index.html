@@ -78,6 +78,10 @@
 
                setupForm(data);
 
+               if (GAME.rules.hidePicks) {
+                  $(body).addClass("hide-picks");
+               }
+
                GAME.state.setHook(STATES.game, gameOverlay);
                GAME.state.setHook(STATES.setup, updateTicker);
                updateTicker();
