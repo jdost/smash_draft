@@ -39,6 +39,14 @@ footer span {
    bottom: 0;
    width: 100px;
 }
+footer a {
+   z-index: 2000 !important;
+   position: absolute !important;
+   width: 40px;
+   text-align: center;
+   bottom: 25px;
+   left: 20px;
+}
 .hide-picks .drafted,
 .hide-picks .drafted {
    display: none;
@@ -104,4 +112,7 @@ li i:before {
    clear: both;
    float: left;
    display: block;
+}
+.about {
+   padding: 1rem;
 }

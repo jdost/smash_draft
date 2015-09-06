@@ -85,6 +85,7 @@
       <footer class="light-blue darken-4 white-text valign-wrapper">
          <div class="valign"></div>
          <button class="right btn">swap</button>
+         <a href="javascript:;" id="about" class="red darken-1 waves-light btn-floating left">?</a>
          <span class="right-align"></span>
       </footer>
 
@@ -106,6 +107,7 @@
                GAME.current = [];
 
                setupForm(data);
+               $("#about").click(showAbout);
 
                GAME.state.setHook(STATES.game, gameOverlay);
                GAME.state.setHook(STATES.setup, updateTicker);

@@ -11,7 +11,8 @@ RULESET = {
     "bestOf": 3,
     "buffer": 0,
     "miis": False,
-    "hidePicks": False
+    "hidePicks": False,
+    "customHelp": False
 }
 USAGE = '''
 build_ruleset <ruleset_name>
@@ -100,6 +101,15 @@ if __name__ == "__main__":
         target_type=int,
         validation=lambda x: x >= 0
     )
+
+    RULESET["customHelp"] = prompt(
+        msg="Have a custom help message",
+        default=RULESET["customHelp"],
+        target_type=bool
+    )
+
+    if RULESET["customHelp"]:
+        print("Edit the custom file: data/about/" + sys.argv[1])
 
     json.dump(RULESET, open(target_ruleset, "w"),
               indent=2, sort_keys=True, separators=(',', ': '))

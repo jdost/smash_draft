@@ -4,5 +4,6 @@
    "bestOf": 3,
    "buffer": 0,
    "miis": false,
-   "hidePicks": false
+   "hidePicks": false,
+   "customHelp": true
 }
