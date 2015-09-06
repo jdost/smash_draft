@@ -1,0 +1,15 @@
+<h3>Smash Drafter</h3>
+
+<p>This is a web tool for a semi-random Smash 4 set.  It pits two teams of two
+players in a best of 3 series.</p>
+
+<p>The teams each get 1 ban, this can be used to remove characters that the teams
+don't want to play themselves or to limit their opponents from using a preferred
+character.  After bans, teams alternate picking characters.  A player can swap their
+pick using the "swap" button in the bottom right.  After the first match, the losing
+team gets to pick all of their characters before the winning team.</p>
+
+<p>The characters are removed upon being selected, so as the set goes on, the choice
+of characters available for players shrinks.</p>
+
+<p>These rules are all customizable.</p>

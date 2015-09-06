@@ -46,6 +46,35 @@
                <input name="b_0" type="text" />
                <label label-for="b_0">Player Name</label>
             </div>
+            <div class="input-field col s6">
+               <input name="a_1" type="text" />
+               <label label-for="a_1">Player Name</label>
+            </div>
+            <div class="input-field col s6">
+               <input name="b_1" type="text" />
+               <label label-for="b_1">Player Name</label>
+            </div>
+            <div class="input-field col s6">
+               <input name="a_2" type="text" />
+               <label label-for="a_2">Player Name</label>
+            </div>
+            <div class="input-field col s6">
+               <input name="b_2" type="text" />
+               <label label-for="b_2">Player Name</label>
+            </div>
+            <div class="input-field col s6">
+               <input name="a_3" type="text" />
+               <label label-for="a_3">Player Name</label>
+            </div>
+            <div class="input-field col s6">
+               <input name="b_3" type="text" />
+               <label label-for="b_3">Player Name</label>
+            </div>
+
+            <div class="col s12">
+               <input id="hidePicks" type="checkbox" class="filled-in" />
+               <label for="hidePicks">Hide picked characters</label>
+            </div>
 
             <button class="right btn waves-effect waves-light" type="submit" name="action">
                Smash!
@@ -56,6 +85,7 @@
       <footer class="light-blue darken-4 white-text valign-wrapper">
          <div class="valign"></div>
          <button class="right btn">swap</button>
+         <a href="javascript:;" id="about" class="red darken-1 waves-light btn-floating left">?</a>
          <span class="right-align"></span>
       </footer>
 
@@ -77,6 +107,7 @@
                GAME.current = [];
 
                setupForm(data);
+               $("#about").click(showAbout);
 
                GAME.state.setHook(STATES.game, gameOverlay);
                GAME.state.setHook(STATES.setup, updateTicker);

@@ -38,15 +38,14 @@ function setupForm(rules) {
     $("#b_color").appendChild(yellowOption);
   }
 
-  var formTail = form.find("button");
-  for (var i=1; i < rules.teamSize; i++) {
+  if (rules.hidePicks) {
+    form.find("#hidePicks").attr("checked", "checked");
+  }
+
+  for (var i=rules.teamSize; i < 4; i++) {
     for (var team = 0; team < 2; team++) {
       var input = ["a", "b"][team] + "_" + i;
-      formTail.before(
-        "<div class=\"input-field col s6\">" +
-          "<input name=\"" + input + "\" type=\"text\" />" +
-          "<label label-for=\"" + input + "\">Player Name</label>" +
-        "</div>");
+      form.find("[name=" + input + "]").parent().remove();
     }
   }
 
@@ -77,6 +76,10 @@ function setupTeams(values_) {
 
     GAME.teams.push(team(color, players, $("#" + team_name + "_team")));
   });
+
+  if ($("#hidePicks:checked").length) {
+    $(document.body).addClass("hide-picks");
+  }
 
   GAME.state.setHook(STATES.ban, function () {
     GAME.teams[GAME.state.pick()].active();
@@ -139,4 +142,48 @@ function gameOverlay() {
     });
 
   $("body").append(overlay);
+};
+
+function showAbout() {
+  if ($("div.about").length) {
+    $("div.about").openModal();
+    return;
+  }
+
+  var display = function (message) {
+    var aboutDiv = $("<div class='about row modal container'></div>");
+    aboutDiv.html(message);
+    $("main").append(aboutDiv);
+    aboutDiv.openModal();
+  };
+
+  if (GAME.rules.customHelp) {
+    var ruleset = location.search.replace("?", "") || "default";
+    $.ajax("/data/about/" + ruleset, {
+    }).done(function (response) {
+      display(response);
+    });
+  } else {
+    var msg = "<p>This is a tool for selecting characters from a randomized pool " +
+      "from the whole character roster, ";
+    msg += GAME.rules.miis ? "including" : "excluding" + " the mii fighters.  " +
+      "Each character selected removes that from the pool, so if the set goes " +
+      "the distance, the final character selected will be ";
+    if (GAME.rules.buffer > 0) {
+      msg += "from the final " + (GAME.rules.buffer+1) + " characters left.  ";
+    } else {
+      msg += "the last character left.  ";
+    }
+    if (GAME.rules.bans > 0) {
+      msg += "Each team gets " + GAME.rules.bans + " bans to remove characters " +
+        "the pool of choices.  ";
+    }
+    msg += "Teams then alternate picks for who they will play in the first game." +
+      "  Players may 'swap' picks within their team with the swap button in the " +
+      "bottom right.  After selecting the winning team of the match, the losing " +
+      "team then gets to select all of their characters and then the other team." +
+      "</p>";
+
+      display(msg);
+  }
 };
