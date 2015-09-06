@@ -22,6 +22,8 @@ function team (color, players, container) {
     }
   }
 
+  container.pushpin();
+
   return {
     pick: function (character) {
       picks[active].picked(character);

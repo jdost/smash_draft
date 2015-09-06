@@ -1,4 +1,7 @@
 #forms { padding: 20px; }
+div.roster { height: 100px; }
+div.roster ul#a_team { left: 0; }
+div.roster ul#b_team { right: 0; }
 #roster > div {
    width: 200px;
    height: 200px;
