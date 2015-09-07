@@ -38,6 +38,7 @@ footer span {
    display: block;
    bottom: 0;
    width: 100px;
+   padding-right: 15px;
 }
 footer a {
    z-index: 2000 !important;
@@ -69,6 +70,8 @@ footer a {
 }
 #a_team img, #b_team img {
    float: left;
+   width: 64px;
+   height: 64px;
 }
 .clearBans {
    clear: both;

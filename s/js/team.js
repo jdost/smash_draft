@@ -38,13 +38,15 @@ function team (color, players, container) {
       if (!isActive)
         return;
 
-      if (active % 2) {
+      var teamSize = GAME.rules.teamSize;
+
+      if (active % teamSize) {
         var swap = picks.splice(active, 1)[0];
-        picks.splice(active + 1, 0, swap);
+        picks.splice(active + teamSize - (active % teamSize), 0, swap);
 
         swap.uncurrent();
         picks[active].current();
-      } else {
+      } else if (teamSize === 2) { // Already picked
         var swap = picks.splice(active, 1)[0];
         picks.splice(active - 1, 0, swap);
 
