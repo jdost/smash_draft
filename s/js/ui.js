@@ -34,8 +34,8 @@ function setupForm(rules) {
 
   if (rules.teamSize > 2) {
     var yellowOption = "<option value=\"yellow\">Yellow</option>";
-    $("#a_color").appendChild(yellowOption);
-    $("#b_color").appendChild(yellowOption);
+    $("#a_color").append(yellowOption);
+    $("#b_color").append(yellowOption);
   }
 
   if (rules.hidePicks) {
