@@ -36,9 +36,15 @@ footer div {
 }
 footer span {
    display: block;
-   bottom: 0;
+   bottom: 20px;
    width: 100px;
-   padding-right: 15px;
+   right: 15px;
+   position: absolute;
+}
+footer button {
+   position: absolute;
+   bottom: 25px;
+   right: 100px;
 }
 footer a {
    z-index: 2000 !important;
